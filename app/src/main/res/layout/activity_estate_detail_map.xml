@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <include layout="@layout/view_toolbar" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.baidu.mapapi.map.MapView
+                android:id="@+id/map_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <include
+                android:id="@+id/include_arcmenu"
+                layout="@layout/view_arcmenu" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/float_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#50000000" />
+
+            <LinearLayout
+                android:id="@+id/search_route_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@color/white"
+                    android:paddingLeft="1dp"
+                    android:paddingRight="1dp">
+
+                    <TextView
+                        android:id="@+id/tv_bus"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:text="公交"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_car"
+                        style="@style/ListItemTextBase.Common"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/white_bg_with_blue_border"
+                        android:gravity="center"
+                        android:text="驾车" />
+
+                    <TextView
+                        android:id="@+id/tv_walk"
+                        style="@style/ListItemTextBase.Common"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/white_bg_with_blue_border"
+                        android:gravity="center"
+                        android:text="步行" />
+
+                    <TextView
+                        android:id="@+id/tv_biking"
+                        style="@style/ListItemTextBase.Common"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/white_bg_with_blue_border"
+                        android:gravity="center"
+                        android:text="骑行" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/dark_gray" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="88dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/tv_convert"
+                        android:layout_width="48dp"
+                        android:layout_height="64dp"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:text="交换"
+                        android:textColor="@color/white" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/tv_search_route"
+                        android:layout_toRightOf="@+id/tv_convert"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/et_start"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:hint="输入起点" />
+
+                        <EditText
+                            android:id="@+id/et_end"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:hint="输入终点" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_search_route"
+                        android:layout_width="48dp"
+                        android:layout_height="64dp"
+                        android:layout_alignParentRight="true"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:text="搜索"
+                        android:textColor="@color/white" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

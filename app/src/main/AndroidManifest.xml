@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dong.soufang">
+
+    <uses-permission android:name="com.ushopal.catwoman.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+
+    <!-- 震动权限 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <!-- 使用照相机权限 -->
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+    <application
+        android:name=".MainApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+
+        <!-- 百度地图 -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="y7VsXqvEFXP3Nic9dedwN2Xy" />
+
+        <activity
+            android:name=".activity.WelcomeActivity"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.MainActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:label="登录" />
+        <activity
+            android:name=".activity.houses.NewEstatesListActivity"
+            android:label="新房" />
+        <activity
+            android:name=".activity.houses.RentHousesListActivity"
+            android:label="租房" />
+        <activity android:name=".activity.houses.EstatesMoreActivity" />
+        <activity android:name=".activity.MyAccountActivity" />
+        <activity android:name=".activity.MyCollectionActivity" />
+        <activity android:name=".activity.MyMessageActivity" />
+        <activity
+            android:name=".activity.SettingsActivity"
+            android:label="设置" />
+        <activity android:name=".activity.ArticleDetailActivity" />
+        <activity
+            android:name=".activity.SelectCityActivity"
+            android:label="选择城市" />
+        <activity
+            android:name=".activity.map.EstateDetailMapActivity"
+            android:label="位置及周边" />
+        <activity android:name=".activity.houses.NewEstateDetailActivity" />
+        <activity android:name=".activity.houses.OldHouseDetailActivity" />
+        <activity android:name=".activity.houses.OldHousesListActivity" />
+        <activity android:name=".activity.ShowImageActivity" />
+        <activity
+            android:name=".activity.map.NewEstatesListMapActivity"
+            android:label="新房"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity android:name=".activity.map.OldHousesListMapActivity" />
+        <activity
+            android:name=".activity.HousesOfEstateActivity"
+            android:label="户型列表" />
+        <activity android:name=".activity.map.RoutePlanResultActivity" />
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote">
+            <intent-filter>
+                <action android:name="com.baidu.location.service_v2.2" />
+            </intent-filter>
+        </service>
+
+        <provider
+            android:name="com.dong.soufang.SuggestionProvider"
+            android:authorities="com.dong.soufang.SuggestionProvider"
+            android:exported="false" />
+
+    </application>
+
+</manifest>
