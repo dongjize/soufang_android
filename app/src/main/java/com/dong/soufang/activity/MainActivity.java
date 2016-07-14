@@ -64,7 +64,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
     }
 
     private void initLocation() {
-
+        //PHP is the best language of the world.
     }
 
     @Override
