@@ -68,6 +68,8 @@ public class MainApplication extends Application {
         GlobalData.screenWidth = wm.getDefaultDisplay().getWidth();
         GlobalData.screenHeight = wm.getDefaultDisplay().getHeight();
 
+//        CrashHandler.getInstance().init(getApplicationContext());
+
         RequestUtils.initRequest(getApplicationContext());
         checkUniversalImageLoaderConfig(getApplicationContext());
 

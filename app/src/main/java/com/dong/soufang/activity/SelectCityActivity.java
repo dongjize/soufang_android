@@ -40,7 +40,7 @@ public class SelectCityActivity extends BaseActivity implements OnListItemClickL
 
         initToolbar();
 
-        recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+//        recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
 
         getCityList();
     }
