@@ -15,8 +15,6 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import com.dong.soufang.DividerItemDecoration;
-import com.dong.soufang.GlobalData;
-import com.dong.soufang.util.map.HouseTypeMap;
 import com.dong.soufang.R;
 import com.dong.soufang.activity.base.BaseActivity;
 import com.dong.soufang.activity.map.NewEstatesListMapActivity;
@@ -31,6 +29,7 @@ import com.dong.soufang.http.RequestBean;
 import com.dong.soufang.impl.OnListItemClickListener;
 import com.dong.soufang.util.IoUtils;
 import com.dong.soufang.util.JsonUtils;
+import com.dong.soufang.util.map.HouseTypeMap;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -139,7 +138,6 @@ public class NewEstatesListActivity extends BaseActivity implements View.OnClick
      */
     private void getNewEstatesList() {
         HashMap<String, Object> params = new HashMap<>();
-        params.put("city_code", GlobalData.CITY);
         RequestBean requestBean = new RequestBean(TAG, HttpApi.GetNewEstatesListApi, params);
         httpHandler.getNewEstatesList(requestBean, new Callback() {
             @Override

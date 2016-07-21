@@ -15,7 +15,6 @@ import android.widget.AdapterView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 
-import com.dong.soufang.GlobalData;
 import com.dong.soufang.R;
 import com.dong.soufang.activity.base.BaseActivity;
 import com.dong.soufang.activity.map.OldHousesListMapActivity;
@@ -128,7 +127,6 @@ public class OldHousesListActivity extends BaseActivity implements View.OnClickL
     private void getOldHousesList() {
         swipeRefreshLayout.setRefreshing(false);
         HashMap<String, Object> params = new HashMap<>();
-        params.put("city", GlobalData.CITY);
         RequestBean requestBean = new RequestBean(TAG, HttpApi.GetOldHousesListApi, params);
         httpHandler.getOldHousesList(requestBean, new Callback() {
             @Override

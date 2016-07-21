@@ -30,8 +30,8 @@ import com.dong.soufang.http.BaseResult;
 import com.dong.soufang.http.Callback;
 import com.dong.soufang.http.HttpApi;
 import com.dong.soufang.http.RequestBean;
-import com.dong.soufang.util.map.CityHashMap;
 import com.dong.soufang.util.ImageLoaderUtils;
+import com.dong.soufang.util.map.CityHashMap;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -89,8 +89,6 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         titles.add("房产");
         titles.add("信息");
 
-        mTabLayout.addTab(mTabLayout.newTab().setText(titles.get(0)));
-        mTabLayout.addTab(mTabLayout.newTab().setText(titles.get(1)));
         mAdapter = new MainTabAdapter(getSupportFragmentManager(), fragments, titles);
         mViewPager.setAdapter(mAdapter);
         mTabLayout.setupWithViewPager(mViewPager);
@@ -99,7 +97,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.setDrawerListener(toggle);
+        drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);

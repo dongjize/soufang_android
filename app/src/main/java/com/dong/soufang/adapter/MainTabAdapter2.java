@@ -1,23 +1,28 @@
 package com.dong.soufang.adapter;
 
+import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
+import android.view.View;
+import android.widget.ImageView;
 
 import java.util.List;
 
 /**
- * Description: 主页tab的Adapter
+ * Description:
  * <p>
  * Author: dong
- * Date: 16/3/16
+ * Date: 7/21/16
  */
-public class MainTabAdapter extends FragmentStatePagerAdapter {
+public class MainTabAdapter2 extends FragmentStatePagerAdapter {
+    private Context mContext;
     private List<Fragment> fragmentList;
-    private List<String> titleList;
+    private int[] titleList;
 
-    public MainTabAdapter(FragmentManager fm, List<Fragment> fragmentList, List<String> titleList) {
+    public MainTabAdapter2(Context context, FragmentManager fm, List<Fragment> fragmentList, int[] titleList) {
         super(fm);
+        this.mContext = context;
         this.fragmentList = fragmentList;
         this.titleList = titleList;
     }
@@ -32,9 +37,9 @@ public class MainTabAdapter extends FragmentStatePagerAdapter {
         return fragmentList.size();
     }
 
-    @Override
-    public CharSequence getPageTitle(int position) {
-        return titleList.get(position);
+    public View getTabView(int position) {
+        ImageView iv = new ImageView(mContext);
+        iv.setImageResource(titleList[position]);
+        return iv;
     }
-
 }

@@ -93,17 +93,6 @@ public class ArticlesFragment extends BaseFragment implements OnListItemClickLis
                     mAdapter.setOnListItemClickListener(ArticlesFragment.this);
                 }
 
-
-//                if (articleList != null) {
-//                    if (mAdapter == null) {
-//                        mAdapter = new ArticlesListAdapter2(context, articleList);
-//                        recyclerView.setAdapter(mAdapter);
-//                        mAdapter.setOnListItemClickListener(ArticlesFragment.this);
-//                    } else {
-//                        mAdapter.notifyDataSetChanged();
-//                    }
-//                }
-
             }
 
             @Override

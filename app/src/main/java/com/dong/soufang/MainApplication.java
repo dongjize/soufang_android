@@ -9,7 +9,6 @@ import com.baidu.location.LocationClient;
 import com.baidu.location.LocationClientOption;
 import com.baidu.mapapi.SDKInitializer;
 import com.baidu.mapapi.map.MyLocationConfiguration;
-import com.dong.soufang.exception.CrashHandler;
 import com.dong.soufang.http.RequestUtils;
 import com.dong.soufang.impl.MyLocationListener;
 import com.dong.soufang.util.CommonUtils;
@@ -69,7 +68,7 @@ public class MainApplication extends Application {
         GlobalData.screenWidth = wm.getDefaultDisplay().getWidth();
         GlobalData.screenHeight = wm.getDefaultDisplay().getHeight();
 
-        CrashHandler.getInstance().init(getApplicationContext());
+//        CrashHandler.getInstance().init(getApplicationContext());
 
         RequestUtils.initRequest(getApplicationContext());
         checkUniversalImageLoaderConfig(getApplicationContext());
