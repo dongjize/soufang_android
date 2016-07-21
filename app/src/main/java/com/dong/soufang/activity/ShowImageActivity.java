@@ -6,7 +6,7 @@ import android.support.v7.widget.Toolbar;
 
 import com.dong.soufang.R;
 import com.dong.soufang.activity.base.BaseActivity;
-import com.dong.soufang.custom.imageview.ZoomImagePagerAdapter;
+import com.dong.soufang.custom.imageView.ZoomImagePagerAdapter;
 
 import java.util.ArrayList;
 

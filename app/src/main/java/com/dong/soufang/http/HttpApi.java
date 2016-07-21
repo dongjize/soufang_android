@@ -34,7 +34,7 @@ public class HttpApi {
     public static final String GetFilteredOldHousesApi = BaseUrl + CITY + "old_houses/sale/"; //条件筛选后的二手房列表
     public static final String GetRentHousesListApi = BaseUrl + CITY + "rent_houses/"; //租房列表
 
-    public static final String GetArticlesListApi = BaseUrl + "articles/"; //资讯列表
+    public static final String GetArticlesListApi = BaseUrl + "articles"; //资讯列表
     public static final String GetCollectArticleApi = BaseUrl + "article/collect"; //收藏资讯
     public static final String GetUserArticleCollectionsApi = BaseUrl + "articles/collections"; //用户收藏资讯列表
 

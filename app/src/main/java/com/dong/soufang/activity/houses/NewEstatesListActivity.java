@@ -14,6 +14,7 @@ import android.widget.AdapterView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 
+import com.dong.soufang.DividerItemDecoration;
 import com.dong.soufang.GlobalData;
 import com.dong.soufang.util.map.HouseTypeMap;
 import com.dong.soufang.R;
@@ -149,6 +150,8 @@ public class NewEstatesListActivity extends BaseActivity implements View.OnClick
                         LinearLayoutManager layoutManager = new LinearLayoutManager(NewEstatesListActivity.this);
                         recyclerView.setLayoutManager(layoutManager);
                         recyclerView.setAdapter(mAdapter = new NewEstatesListAdapter(NewEstatesListActivity.this, newEstateList));
+                        recyclerView.addItemDecoration(new DividerItemDecoration(NewEstatesListActivity.this,
+                                DividerItemDecoration.VERTICAL_LIST));
                         mAdapter.setOnListItemClickListener(NewEstatesListActivity.this);
                     } else {
                         mAdapter.notifyDataSetChanged();

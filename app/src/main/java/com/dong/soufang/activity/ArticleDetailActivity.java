@@ -33,7 +33,7 @@ public class ArticleDetailActivity extends BaseWebViewActivity {
         Bundle bundle = getIntent().getExtras();
         newsId = bundle.getInt("id");
         isCollected = bundle.getBoolean("is_collected");
-        url = HttpApi.GetArticlesListApi + newsId;
+        url = HttpApi.GetArticlesListApi + "/" + newsId;
         loadData(url);
     }
 

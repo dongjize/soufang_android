@@ -1,4 +1,4 @@
-package com.dong.soufang.custom.imageview;
+package com.dong.soufang.custom.imageView;
 
 import android.annotation.TargetApi;
 import android.content.Context;

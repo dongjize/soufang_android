@@ -1,4 +1,4 @@
-package com.dong.soufang.custom.imageview;
+package com.dong.soufang.custom.imageView;
 
 import android.content.Context;
 import android.support.v4.view.PagerAdapter;

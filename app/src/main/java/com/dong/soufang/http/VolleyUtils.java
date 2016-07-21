@@ -78,7 +78,7 @@ public class VolleyUtils {
      * @param errorListener
      */
     public void httpGetString(RequestBean requestBean, Listener<String> listener, ErrorListener errorListener) {
-        String url = requestBean.getUrl();
+        String url = requestBean.getUrl() + getParams(requestBean.getParams());
         StringRequest request = new StringRequest(url, listener, errorListener) {
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {

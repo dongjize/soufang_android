@@ -6,10 +6,11 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <android.support.v7.widget.RecyclerView
+    <com.dong.soufang.custom.recyclerView.LoadMoreRecyclerView
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/light_gray" />
+        android:background="@color/light_gray"
+        app:layoutManager="LinearLayoutManager" />
 
 </android.support.v4.widget.SwipeRefreshLayout>
