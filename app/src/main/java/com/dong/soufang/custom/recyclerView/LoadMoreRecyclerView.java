@@ -78,7 +78,7 @@ public class LoadMoreRecyclerView extends RecyclerView {
      *
      * @return
      */
-    private int getFirstVisiblePosition() {
+    public int getFirstVisiblePosition() {
         int position;
         if (getLayoutManager() instanceof LinearLayoutManager) {
             position = ((LinearLayoutManager) getLayoutManager()).findFirstVisibleItemPosition();

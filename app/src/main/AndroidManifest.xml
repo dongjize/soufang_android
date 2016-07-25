@@ -113,6 +113,8 @@
             android:label="户型列表" />
         <activity android:name=".activity.map.RoutePlanResultActivity" />
 
+        <activity android:name=".activity.ArticleDetailActivityV2" />
+
         <service
             android:name="com.baidu.location.f"
             android:enabled="true"

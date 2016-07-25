@@ -10,7 +10,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 /**
- * Description:
+ * Description: RecyclerView中每个item的装饰效果
  * <p>
  * Author: dong
  * Date: 7/20/16

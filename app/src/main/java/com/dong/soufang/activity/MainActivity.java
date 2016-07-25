@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
@@ -24,6 +23,7 @@ import com.dong.soufang.activity.base.BaseActivity;
 import com.dong.soufang.adapter.MainTabAdapter;
 import com.dong.soufang.bean.User;
 import com.dong.soufang.custom.SelectableRoundedImageView;
+import com.dong.soufang.custom.tabLayout.DividerTabLayout;
 import com.dong.soufang.fragment.ArticlesFragment;
 import com.dong.soufang.fragment.EstatesFragment;
 import com.dong.soufang.http.BaseResult;
@@ -40,7 +40,7 @@ import java.util.List;
 public class MainActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener {
     private static final String TAG = MainActivity.class.getSimpleName();
     private MainApplication application;
-    private TabLayout mTabLayout;
+    private DividerTabLayout mTabLayout;
     private ViewPager mViewPager;
     private List<Fragment> fragments;
     private Fragment estatesFragment, newsFragment;
@@ -76,7 +76,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 
     private void initData() {
         mViewPager = (ViewPager) findViewById(R.id.viewpager);
-        mTabLayout = (TabLayout) findViewById(R.id.tablayout);
+        mTabLayout = (DividerTabLayout) findViewById(R.id.tablayout);
 
         //设置TabLayout
         fragments = new ArrayList<>();
@@ -92,6 +92,22 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         mAdapter = new MainTabAdapter(getSupportFragmentManager(), fragments, titles);
         mViewPager.setAdapter(mAdapter);
         mTabLayout.setupWithViewPager(mViewPager);
+
+//        int[] resIds = new int[]{R.mipmap.ic_launcher, R.mipmap.ic_launcher};
+//        MainTabAdapter2 pagerAdapter = new MainTabAdapter2(getSupportFragmentManager(), this, fragments, titles, resIds);
+//        mViewPager.setAdapter(pagerAdapter);
+//        mTabLayout.setupWithViewPager(mViewPager);
+//
+//        for (int i = 0; i < mTabLayout.getTabCount(); i++) {
+//            TabLayout.Tab tab = mTabLayout.getTabAt(i);
+//            if (tab != null) {
+//                tab.setCustomView(pagerAdapter.getTabView(i));
+//            }
+//        }
+
+
+
+
 
         //设置Drawer相关
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
